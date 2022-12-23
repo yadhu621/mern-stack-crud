@@ -11,7 +11,7 @@ const EditStudent = (props) => {
   }); 
 
   const onSubmit = (studentObject) => { 
-    axios.put("http://localhost:3000/students/update-student/" + props.match.params.id, studentObject) 
+    axios.put("http://localhost:4000/students/update-student/" + props.match.params.id, studentObject) 
       .then((res) => { 
         if (res.status === 200) { 
           alert("Student successfully updated"); 
@@ -22,7 +22,7 @@ const EditStudent = (props) => {
   }; 
   
   useEffect(() => { 
-    axios.get( "http://localhost:3000/students/update-student/" + props.match.params.id ) 
+    axios.get( "http://localhost:4000/students/update-student/" + props.match.params.id ) 
       .then((res) => { 
         const { name, email, rollno } = res.data; 
         setFormValues({ name, email, rollno }); 

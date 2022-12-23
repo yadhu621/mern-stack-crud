@@ -36,10 +36,10 @@ const App = () => {
             <Col md={12}> 
               <div className="wrapper"> 
                 <Routes> 
-                  <Route exact path="/" component={CreateStudent} /> 
-                  <Route path="/create-student" component={CreateStudent} /> 
-                  <Route path="/edit-student/:id" component={EditStudent} /> 
-                  <Route path="/student-list" component={StudentList} /> 
+                  <Route exact path="/" element={<CreateStudent/>} /> 
+                  <Route path="/create-student" element={<CreateStudent/>} /> 
+                  <Route path="/edit-student/:id" element={<EditStudent/>} /> 
+                  <Route path="/student-list" element={<StudentList/>} /> 
                 </Routes> 
               </div> 
             </Col> 
